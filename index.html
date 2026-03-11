@@ -1,70 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>予備試験 短答式過去問 - サポート</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>予備試験 短答式過去問 サポート</title>
+  <meta name="description" content="iOSアプリ『予備試験 短答式過去問』のサポートページです。">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --accent: #0f766e;
+      --border: #dbe3ef;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1220;
+        --card: #111a2c;
+        --text: #e5ecf7;
+        --muted: #b8c2d3;
+        --accent: #5eead4;
+        --border: #1f2a44;
+      }
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
-      background: #0d1117;
-      color: #e6edf3;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding: 40px 20px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      background: linear-gradient(180deg, var(--bg), #dce8ff 120%);
+      color: var(--text);
+      line-height: 1.7;
     }
-    .container { max-width: 600px; width: 100%; }
-    h1 { font-size: 24px; margin-bottom: 8px; }
-    .subtitle { color: #8b949e; margin-bottom: 32px; }
-    .section { margin-bottom: 32px; }
-    .section h2 { font-size: 18px; margin-bottom: 12px; color: #58a6ff; }
-    .section p, .section li { font-size: 15px; line-height: 1.7; color: #c9d1d9; }
-    .section ul { padding-left: 20px; }
-    .section li { margin-bottom: 6px; }
-    a { color: #58a6ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .btn {
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      line-height: 1.3;
+    }
+    h2 {
+      margin: 24px 0 8px;
+      font-size: 1.1rem;
+    }
+    p, li { color: var(--muted); }
+    ul {
+      margin: 8px 0 0;
+      padding-left: 1.2rem;
+    }
+    .badge {
       display: inline-block;
-      background: #238636;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-size: 15px;
-      margin-top: 8px;
+      margin-bottom: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.1);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
     }
-    .btn:hover { background: #2ea043; text-decoration: none; }
+    footer {
+      margin-top: 18px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    code {
+      background: rgba(127, 127, 127, 0.15);
+      padding: 0.1em 0.4em;
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>予備試験 短答式過去問</h1>
-    <p class="subtitle">サポートページ</p>
+  <main class="container">
+    <section class="card">
+      <span class="badge">iOSアプリ サポートサイト</span>
+      <h1>予備試験 短答式過去問</h1>
+      <p>
+        司法試験予備試験の短答式過去問をスマホで演習できる iPhone アプリです。
+        平成28年〜令和7年の10年分を収録しています。
+      </p>
 
-    <div class="section">
-      <h2>アプリについて</h2>
-      <p>司法試験予備試験の短答式過去問を演習できるアプリです。令和元年〜令和7年の全科目に対応しています。</p>
-    </div>
-
-    <div class="section">
-      <h2>お問い合わせ</h2>
-      <p>不具合の報告や機能のリクエストは、GitHub Issues からお願いします。</p>
-      <a class="btn" href="https://github.com/sugar-penguin-lullaby/shihou-yobi-support/issues" target="_blank">お問い合わせはこちら</a>
-    </div>
-
-    <div class="section">
-      <h2>よくある質問</h2>
+      <h2>主な機能</h2>
       <ul>
-        <li><strong>購入が反映されない場合</strong> — アプリ内の「購入を復元」ボタンをお試しください。</li>
-        <li><strong>問題の内容に誤りがある場合</strong> — GitHub Issues からご報告ください。</li>
+        <li>年度別・科目別演習</li>
+        <li>詳細解説、復習、ブックマーク</li>
+        <li>ランダム出題、学習統計</li>
+        <li>フォントサイズ調整、ダークモード</li>
+        <li>完全オフライン対応</li>
+        <li>一部無料、買い切り課金あり</li>
       </ul>
-    </div>
 
-    <div class="section">
-      <h2>プライバシーポリシー</h2>
-      <p>本アプリは個人情報を収集しません。解答履歴はすべて端末内にのみ保存され、外部サーバーへの送信は行いません。アプリ内課金の処理は Apple のシステムを通じて行われます。</p>
-    </div>
-  </div>
+      <h2>AdMob 向け情報</h2>
+      <p>
+        本サイトは AdMob の <code>app-ads.txt</code> 対応のために公開しています。
+      </p>
+
+      <footer>
+        &copy; 2026 Nakano Yuichiro
+      </footer>
+    </section>
+  </main>
 </body>
 </html>
